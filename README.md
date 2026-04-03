@@ -80,7 +80,7 @@ pip install -r requirements.txt
 ### 3) Запуск
 
 ```bash
-python app/main.py
+python src/main.py
 ```
 Из корня репозитория
 
