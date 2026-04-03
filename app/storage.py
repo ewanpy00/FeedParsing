@@ -12,8 +12,6 @@ from notifier import Notifier
 
 
 class Storage:
-    """Сохранение постов в БД и дедупликация по уникальным ограничениям."""
-
     def find_existing(self, session: Session, post: PostIn) -> PostRow | None:
         link = str(post.link)
         row = session.scalar(select(PostRow).where(PostRow.source == post.source, PostRow.link == link))
